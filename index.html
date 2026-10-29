@@ -1,181 +1,453 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AM Resin Adventures — Handmade Resin Art | Order on WhatsApp</title>
-<meta name="description" content="Handmade resin coasters, trays, clocks, jewelry & custom gifts. Order easily on WhatsApp or Call. Shipping across India." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,500;9..144,0,700;9..144,1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>A.M Resin Adventure — Customised Resin Gifts, Keychains, Coasters &amp; Phone Covers</title>
+<meta name="description" content="Hand-poured resin coasters, keychains, pendants, pens and pressed-flower phone covers, personalised with names, photos and your own flowers. Made to order in Navsari, India. Order on WhatsApp." />
+<meta name="author" content="A.M Resin Adventure" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#fbf6ee" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="A.M Resin Adventure" />
+<meta property="og:title" content="A.M Resin Adventure — Customised Resin Gifts &amp; Accessories" />
+<meta property="og:description" content="Coasters, keychains, pendants, pens and pressed-flower phone covers, hand-poured and personalised in Navsari, India." />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="A.M Resin Adventure — four scalloped resin coasters with pressed blue flowers and gold rims" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="assets/img/og-cover.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/img/coaster-set.webp" type="image/webp" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<link rel="shortcut icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-resin-diy-flaticons-lineal-color-flat-icons-3.png"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="announce">
+  <div class="wrap announce-in">
+    <span class="announce-dot" aria-hidden="true"></span>
+    <p>Customised resin gifts &amp; accessories · Hand-poured in Navsari · Shipped pan-India</p>
+  </div>
+</div>
 
 <header class="topbar">
   <div class="wrap topbar-in">
-    <a class="logo" href="#top">✨ AM <span>Resin Adventures</span></a>
-    <nav class="nav">
-      <a href="#shop">Shop</a>
-      <a href="#custom">Custom Order</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
+    <a class="logo" href="#top" aria-label="A.M Resin Adventure, home">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text">A.M <em>Resin Adventure</em></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#shop" data-nav>Shop</a>
+      <a href="#services" data-nav>Services</a>
+      <a href="#custom" data-nav>Custom orders</a>
+      <a href="#reviews" data-nav>Reviews</a>
+      <a href="#faq" data-nav>FAQ</a>
     </nav>
+
     <div class="top-cta">
-      <a id="callTop" class="btn btn-ghost" href="tel:+91">📞 Call</a>
-      <a id="waTop" class="btn btn-wa" href="#" target="_blank">WhatsApp Order</a>
+      <a class="btn btn-quiet btn-sm" data-call href="tel:+918160776905">
+        <span aria-hidden="true">☎</span> Call
+      </a>
+      <a class="btn btn-wa btn-sm" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">✆</span> WhatsApp
+      </a>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#shop">Shop</a>
-    <a href="#custom">Custom Order</a>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden>
+    <a href="#shop">Shop the collection</a>
+    <a href="#services">Services</a>
+    <a href="#custom">Custom orders</a>
+    <a href="#process">How it works</a>
     <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
-    <a href="tel:+91">📞 Call to Order</a>
-  </div>
+    <div class="mobile-nav-cta">
+      <a class="btn btn-wa" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      <a class="btn btn-quiet" data-call href="tel:+918160776905">Call to order</a>
+    </div>
+  </nav>
 </header>
 
-<main id="top">
-<!-- HERO -->
-<section class="hero wrap">
-  <div class="hero-text">
-    <div class="pill">💎 100% Handmade in India • Shipping Pan-India</div>
-    <h1>Resin art that makes your home <em>shine.</em></h1>
-    <p>Geode coasters, ocean trays, wall clocks, jewelry & preserved-flower gifts. Pick your favourite and order in 1 tap on <strong>WhatsApp</strong> or <strong>Call</strong> — no website payment needed.</p>
-    <div class="hero-btns">
-      <a href="#shop" class="btn btn-dark">Shop Bestsellers ↓</a>
-      <a id="waHero" href="#" target="_blank" class="btn btn-wa">💬 Order on WhatsApp</a>
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="pill"><span aria-hidden="true">◆</span> Customised gifts &amp; accessories · Navsari</p>
+      <h1>Gifts that hold a memory, <em>set in resin.</em></h1>
+      <p class="lede">
+        Pressed flowers, gold leaf and quiet colour, poured into coasters,
+        keychains, pendants, pens and phone covers. Add a name, a date or your
+        own flowers — each piece is made to order in our studio.
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#shop">Browse the collection</a>
+        <a class="btn btn-wa" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">✆</span> Order on WhatsApp
+        </a>
+      </div>
+      <dl class="trust">
+        <div><dt>Hand-poured</dt><dd>One piece at a time</dd></div>
+        <div><dt>Personalised</dt><dd>Names, photos, colours</dd></div>
+        <div><dt>Pan-India</dt><dd>Tracked shipping</dd></div>
+      </dl>
     </div>
-    <div class="trust">
-      <div><strong>500+</strong><span>Happy customers</span></div>
-      <div><strong>4.9★</strong><span>Avg. rating</span></div>
-      <div><strong>Custom</strong><span>Name / photo / flower</span></div>
-    </div>
-  </div>
-  <div class="hero-art">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="hero-card">
-      <div class="hero-card-art">🌊</div>
-      <div class="hero-card-txt">
-        <strong>Ocean Serving Tray</strong>
-        <span>₹1,499 • Bestseller</span>
-        <a href="#shop" class="link">View →</a>
+
+    <div class="hero-art">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <figure class="hero-photo">
+        <img src="assets/img/coaster-set.webp" width="583" height="920"
+             alt="Set of four scalloped resin coasters with pressed blue flowers and gold rims"
+             fetchpriority="high" decoding="async" />
+      </figure>
+
+      <figure class="hero-photo-sm">
+        <img src="assets/img/keychain.webp" width="422" height="510"
+             alt="Two round resin keychains in black and ivory with gold foil, dried blooms and tassels"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <div class="hero-tag">
+        <strong>Made to order</strong>
+        <span>Any name · colour · flower</span>
       </div>
     </div>
-    <div class="hero-card small c2">
-      <div class="hero-card-art">⌚</div>
-      <div class="hero-card-txt"><strong>Geode Wall Clock</strong><span>₹1,999</span></div>
-    </div>
-    <div class="hero-badge">🚚 COD available on WhatsApp orders</div>
-  </div>
-</section>
+  </section>
 
-<!-- CATEGORY + SEARCH -->
-<section id="shop" class="wrap shop">
-  <div class="sec-head">
-    <h2>Shop the collection</h2>
-    <p>Tap any product → <strong>Order on WhatsApp</strong> with auto-filled message, or Call us directly.</p>
+  <!-- TRUST STRIP -->
+  <div class="strip">
+    <ul class="strip-in wrap">
+      <li>✶ Personalisation included</li>
+      <li>✶ Photo approval before dispatch</li>
+      <li>✶ Gift packaging available</li>
+      <li>✶ UPI · Bank transfer</li>
+    </ul>
   </div>
-  <div class="toolbar">
-    <div class="filters" id="filters">
-      <button class="chip active" data-cat="all">All</button>
-      <button class="chip" data-cat="home">Home Decor</button>
-      <button class="chip" data-cat="kitchen">Trays & Coasters</button>
-      <button class="chip" data-cat="jewelry">Jewelry</button>
-      <button class="chip" data-cat="gifts">Gifts & Custom</button>
-    </div>
-    <input id="search" class="search" type="search" placeholder="Search: coaster, clock, keychain..." />
-  </div>
-  <div class="grid" id="grid"></div>
-  <p class="note">💡 Prices in INR. Final price confirmed on WhatsApp (size / color / name customization may vary slightly).</p>
-</section>
 
-<!-- CUSTOM ORDER -->
-<section id="custom" class="custom">
-  <div class="wrap custom-in">
-    <div>
-      <h2>Need something custom?</h2>
-      <p>Wedding garland preservation, baby keepsake, pet photo, nameplate, return gifts for birthdays / weddings — we make it.</p>
-      <ul class="ticks">
-        <li>✓ Send reference photo on WhatsApp</li>
-        <li>✓ Get price & delivery date in minutes</li>
-        <li>✓ Pay advance only after design confirmation</li>
+  <!-- SHOP -->
+  <section id="shop" class="wrap shop" aria-labelledby="shopTitle">
+    <header class="sec-head">
+      <p class="eyebrow">The collection</p>
+      <h2 id="shopTitle">Shop handmade resin pieces</h2>
+      <p class="sec-sub">Every piece is poured by hand, so flowers sit a little differently each time — that is the charm. Tap <strong>Enquire</strong> and your WhatsApp message is written for you.</p>
+    </header>
+
+    <div class="toolbar">
+      <div class="filters" id="filters" role="group" aria-label="Filter by category">
+        <button class="chip is-active" type="button" data-cat="all" aria-pressed="true">All pieces</button>
+        <button class="chip" type="button" data-cat="decor" aria-pressed="false">Décor &amp; coasters</button>
+        <button class="chip" type="button" data-cat="gifts" aria-pressed="false">Keychains &amp; gifts</button>
+        <button class="chip" type="button" data-cat="jewelry" aria-pressed="false">Jewelry</button>
+        <button class="chip" type="button" data-cat="phone" aria-pressed="false">Phone covers</button>
+        <button class="chip" type="button" data-cat="pens" aria-pressed="false">Pens</button>
+      </div>
+
+      <div class="toolbar-right">
+        <div class="field-search">
+          <label class="sr-only" for="search">Search products</label>
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input id="search" class="search" type="search" placeholder="Search coaster, keychain, cover…" autocomplete="off" maxlength="60" />
+        </div>
+
+        <div class="field-sort">
+          <label class="sr-only" for="sort">Sort products</label>
+          <select id="sort" class="sort">
+            <option value="featured">Featured</option>
+            <option value="name">Name: A–Z</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <p class="result-count" id="resultCount" role="status" aria-live="polite"></p>
+
+    <div class="grid" id="grid" aria-busy="false"></div>
+
+    <p class="note">Prices are quoted on WhatsApp — they depend on size, personalisation and delivery. Nothing is charged on this website.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services" aria-labelledby="servicesTitle">
+    <div class="wrap">
+      <header class="sec-head center">
+        <p class="eyebrow">More than a shop</p>
+        <h2 id="servicesTitle">What we can make for you</h2>
+        <p class="sec-sub">From a single keepsake to a full table of return gifts — tell us the occasion and we will design around it.</p>
+      </header>
+
+      <ul class="svc-grid">
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">✎</span>
+          <h3>Customised gifts &amp; accessories</h3>
+          <p>Names, initials, dates, photographs or colour palettes poured into any piece in the collection.</p>
+        </li>
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">✿</span>
+          <h3>Keepsake preservation</h3>
+          <p>Wedding flowers, a first bouquet, travel pebbles or a pet's fur set into a pendant, frame or tray you can keep forever.</p>
+        </li>
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">◈</span>
+          <h3>Bulk &amp; return gifts</h3>
+          <p>Keychains, bookmarks and pens in sets for weddings, birthdays, schools and corporate hampers — matched to one palette.</p>
+        </li>
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">▤</span>
+          <h3>Pressed-flower phone covers</h3>
+          <p>Real dried flowers and gold leaf on a case poured to fit your phone model. Send us the model and we confirm availability.</p>
+        </li>
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">✦</span>
+          <h3>Gifting &amp; delivery</h3>
+          <p>Gift boxing, handwritten notes and tracked pan-India shipping — including direct dispatch to the person you are gifting.</p>
+        </li>
+        <li class="svc">
+          <span class="svc-icon" aria-hidden="true">✆</span>
+          <h3>Design help on WhatsApp</h3>
+          <p>Not sure what suits the occasion? Send a photo of the flowers or a reference, and we will suggest size, style and budget options.</p>
+        </li>
       </ul>
     </div>
-    <form class="card-form" id="customForm">
-      <h3>Get quote on WhatsApp</h3>
-      <label>What do you want?<input id="cfItem" required placeholder="e.g. Couple nameplate, 12 inch" /></label>
-      <div class="row2">
-        <label>Your name<input id="cfName" placeholder="Your name" /></label>
-        <label>City<input id="cfCity" placeholder="e.g. Mumbai" /></label>
+  </section>
+
+  <!-- CUSTOM -->
+  <section id="custom" class="custom" aria-labelledby="customTitle">
+    <div class="wrap custom-in">
+      <div class="custom-copy">
+        <p class="eyebrow eyebrow-light">Bespoke</p>
+        <h2 id="customTitle">Have something of your own in mind?</h2>
+        <p class="custom-lede">Wedding garland preservation, a pet portrait, a house nameplate, a keepsake from a first holiday. Send us a photo and we will design around it.</p>
+        <ul class="ticks">
+          <li><span aria-hidden="true">✓</span> Share a reference photo on WhatsApp</li>
+          <li><span aria-hidden="true">✓</span> Get the quote and timeline in chat</li>
+          <li><span aria-hidden="true">✓</span> Confirm the design before you pay</li>
+        </ul>
+        <p class="custom-note">Fully custom pieces usually take a little longer than the collection — we confirm dates before starting.</p>
       </div>
-      <label>Details<textarea id="cfMsg" rows="3" placeholder="Colors, size, date needed..."></textarea></label>
-      <button class="btn btn-wa full" type="submit">Send request on WhatsApp →</button>
-      <a class="btn btn-ghost full" id="callCustom" href="tel:+919999999999">📞 Or Call to discuss</a>
-    </form>
-  </div>
-</section>
 
-<!-- PROCESS -->
-<section class="wrap process">
-  <h2>How ordering works</h2>
-  <div class="steps">
-    <div class="step"><span>1</span><strong>Pick product</strong><p>Browse & tap "Order on WhatsApp".</p></div>
-    <div class="step"><span>2</span><strong>Chat & confirm</strong><p>We confirm color, name, address.</p></div>
-    <div class="step"><span>3</span><strong>We handcraft</strong><p>Made in 3–7 days + shipping.</p></div>
-    <div class="step"><span>4</span><strong>Pay & receive</strong><p>UPI / COD. Pan-India delivery.</p></div>
-  </div>
-</section>
+      <form class="quote-form" id="customForm" novalidate>
+        <h3>Ask for a quote in one message</h3>
+        <p class="form-sub">Nothing is sent from this page. We check your details, then open WhatsApp with the whole request written out — you press send there and we reply with the price.</p>
 
-<!-- REVIEWS -->
-<section id="reviews" class="wrap">
-  <h2>Loved across India ❤️</h2>
-  <div class="rev-grid">
-    <div class="rev"><strong>★★★★★</strong><p>"Ordered ocean coasters on WhatsApp. Super easy, reached Pune in 4 days. Finishing is premium!"</p><span>— Priya S., Pune</span></div>
-    <div class="rev"><strong>★★★★★</strong><p>"Got my wedding flowers preserved in a tray. Cried happy tears. Highly recommended."</p><span>— Anjali & Rohan, Delhi</span></div>
-    <div class="rev"><strong>★★★★★</strong><p>"Custom name keychains for return gifts. 30 pcs, all perfect. Owner shares video before dispatch."</p><span>— Meera K., Bengaluru</span></div>
-  </div>
-</section>
+        <div class="field">
+          <label for="cfItem">What would you like made? <span class="req">*</span></label>
+          <input id="cfItem" name="item" type="text" required minlength="3" maxlength="120" placeholder="e.g. Nameplate, 12 inch" autocomplete="off" aria-describedby="cfItemErr" />
+          <p class="err" id="cfItemErr" hidden></p>
+        </div>
 
-<!-- FAQ -->
-<section id="faq" class="wrap faq">
-  <h2>FAQ</h2>
-  <details open><summary>How do I order?</summary><p>Tap any <strong>Order on WhatsApp</strong> button — your message is auto-written with product name. Just press send. Or tap Call.</p></details>
-  <details><summary>Do you ship across India? How long?</summary><p>Yes. Made-to-order in 3–7 days + 3–5 days shipping. Express available for gifts.</p></details>
-  <details><summary>Can I customize color / name / photo?</summary><p>Yes! Almost everything is customizable. Mention it in WhatsApp chat.</p></details>
-  <details><summary>Payment methods?</summary><p>UPI, bank transfer, and COD for many items. Advance for fully custom pieces.</p></details>
-  <details><summary>Is resin breakable / food-safe?</summary><p>Resin is strong but not unbreakable — handle with care. Trays/coasters are food-contact safe for dry serving; avoid direct hot vessels.</p></details>
-</section>
+        <div class="row2">
+          <div class="field">
+            <label for="cfName">Your name <span class="req">*</span></label>
+            <input id="cfName" name="name" type="text" required minlength="2" maxlength="60" placeholder="Your name" autocomplete="name" aria-describedby="cfNameErr" />
+            <p class="err" id="cfNameErr" hidden></p>
+          </div>
+          <div class="field">
+            <label for="cfCity">City <span class="req">*</span></label>
+            <input id="cfCity" name="city" type="text" required minlength="2" maxlength="60" placeholder="e.g. Navsari" autocomplete="address-level2" aria-describedby="cfCityErr" />
+            <p class="err" id="cfCityErr" hidden></p>
+          </div>
+        </div>
 
-<!-- CONTACT -->
-<footer class="footer">
-  <div class="wrap foot-in">
-    <div>
-      <h3>✨ AM Resin Adventures</h3>
-      <p>Handmade resin art • Coasters, trays, clocks, jewelry & keepsakes.<br>Made with love in India.</p>
-      <p class="muted">⏰ 10am – 9pm, all days • Reply within 1 hour</p>
+        <div class="field">
+          <label for="cfMsg">Details <span class="opt">(optional)</span></label>
+          <textarea id="cfMsg" name="details" rows="3" maxlength="500" placeholder="Occasion, colours, size, date needed…" aria-describedby="cfMsgErr"></textarea>
+          <p class="err" id="cfMsgErr" hidden></p>
+        </div>
+
+        <button class="btn btn-wa btn-block" type="submit">Continue in WhatsApp</button>
+        <a class="btn btn-outline-light btn-block" data-call href="tel:+918160776905">Or call to discuss</a>
+        <p class="form-fine">We never store your details on this site — the message opens in your own WhatsApp.</p>
+      </form>
     </div>
-    <div class="foot-cta">
-      <a id="waFoot" href="#" target="_blank" class="btn btn-wa">💬 WhatsApp Us</a>
-      <a class="btn btn-light" href="tel:+919999999999">📞 +91 99999 99999</a>
-      <p class="muted small">Replace with your real number in <code>app.js → CONFIG</code></p>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="wrap process" aria-labelledby="processTitle">
+    <header class="sec-head center">
+      <p class="eyebrow">Simple by design</p>
+      <h2 id="processTitle">How ordering works</h2>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3>Pick your piece</h3>
+        <p>Browse the collection and tap Enquire — or message us for advice.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3>Confirm on chat</h3>
+        <p>We confirm design, personalisation, delivery address and the final quote.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3>We handcraft it</h3>
+        <p>Poured and finished in the studio, with a photo or video before dispatch.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <h3>Pay &amp; receive</h3>
+        <p>UPI or bank transfer, then tracked shipping anywhere in India.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews" aria-labelledby="reviewsTitle">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Kind words</p>
+        <h2 id="reviewsTitle">Gifted, kept and loved</h2>
+      </header>
+
+      <div class="rev-grid">
+        <figure class="rev">
+          <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
+          <blockquote>Ordered the pressed-flower coasters on WhatsApp. Super easy, reached Pune in 4 days, and the finishing is genuinely premium.</blockquote>
+          <figcaption>Priya S. · Pune</figcaption>
+        </figure>
+        <figure class="rev">
+          <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
+          <blockquote>Got my wedding flowers preserved in a pendant. She sent photos before sealing it and it arrived perfect. Cried happy tears.</blockquote>
+          <figcaption>Anjali &amp; Rohan · Delhi</figcaption>
+        </figure>
+        <figure class="rev">
+          <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
+          <blockquote>Custom name keychains for return gifts — 30 pieces, all flawless. She shared progress photos without me having to ask.</blockquote>
+          <figcaption>Meera K. · Bengaluru</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
-  <div class="copy">© 2026 AM Resin Adventures • Handmade with 💎</div>
-</footer>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="wrap faq" aria-labelledby="faqTitle">
+    <header class="sec-head center">
+      <p class="eyebrow">Good to know</p>
+      <h2 id="faqTitle">Frequently asked questions</h2>
+    </header>
+
+    <div class="faq-list">
+      <details open>
+        <summary>How do I place an order?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Tap any <strong>Enquire</strong> button. WhatsApp opens with the piece and your personalisation asked for — just send it. Prefer talking? Tap Call.</p></div>
+      </details>
+      <details>
+        <summary>How much does a piece cost?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Every piece is quoted individually, because size, personalisation and delivery all change it. Send us the piece you like on WhatsApp and we will reply with the price and timeline.</p></div>
+      </details>
+      <details>
+        <summary>Do you ship across India?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Yes, pan-India with tracked courier. We are based in Navsari, Gujarat, and can also dispatch directly to the person you are gifting.</p></div>
+      </details>
+      <details>
+        <summary>Can I customise colour, name, photo or my own flowers?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Yes. Names, initials, dates, photographs, colour palettes and your own dried flowers are all possible on most pieces. Send references on WhatsApp and we will confirm what works before you pay.</p></div>
+      </details>
+      <details>
+        <summary>What payment methods do you accept?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>UPI and bank transfer. The quote is confirmed on WhatsApp first, and custom pieces need a percentage advance so the work can start.</p></div>
+      </details>
+      <details>
+        <summary>How do I care for resin?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Wipe with a soft damp cloth and keep it away from direct flame, hot vessels and long sun exposure. Resin is strong but not unbreakable, so avoid dropping or stacking heavy things on it.</p></div>
+      </details>
+      <details>
+        <summary>What if my piece arrives damaged?<span class="chev" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Send a photo within 48 hours of delivery and we will repair or replace it. We pack carefully and share a dispatch photo or video so you know exactly what left the studio.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap cta-band" aria-labelledby="ctaTitle">
+    <div class="cta-card">
+      <div>
+        <h2 id="ctaTitle">Still deciding? Ask us anything.</h2>
+        <p>Real replies from the maker, including photos of pieces in progress — and price quotes for anything you like.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-wa" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✆</span> Chat on WhatsApp</a>
+        <a class="btn btn-quiet" data-call href="tel:+918160776905"><span aria-hidden="true">☎</span> Call the studio</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<!-- Floating -->
-<a id="waFloat" href="#" target="_blank" class="wa-float" aria-label="WhatsApp">💬</a>
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="logo logo-light" href="#top">
+        <span class="logo-mark" aria-hidden="true">✦</span>
+        <span class="logo-text">A.M <em>Resin Adventure</em></span>
+      </a>
+      <p>Customised resin gifts &amp; accessories — coasters, keychains, pendants, pens and phone covers, hand-poured by Afifa Memon in Navsari, India.</p>
+      <address class="foot-address">
+        <span>205, London Heights, Ring Road,<br />Navsari 396445, Gujarat</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=London%20Heights%2C%20Ring%20Road%2C%20Navsari%20396445" target="_blank" rel="noopener noreferrer">Get directions →</a>
+      </address>
+      <p class="foot-hours"><span aria-hidden="true">◔</span> 10am – 9pm, all days</p>
+    </div>
 
-<!-- Modal -->
-<div class="modal-bg" id="modalBg">
-  <div class="modal" id="modalBox"></div>
+    <div class="foot-links">
+      <h3>Explore</h3>
+      <a href="#shop">Shop</a>
+      <a href="#services">Services</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#process">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="foot-contact">
+      <h3>Order &amp; support</h3>
+      <a class="btn btn-wa btn-block" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+      <a class="btn btn-outline-light btn-block" data-call href="tel:+918160776905">+91 81607 76905</a>
+      <a class="foot-mail" href="mailto:afifa.mfa@proton.me">afifa.mfa@proton.me</a>
+      <ul class="pay">
+        <li>UPI</li><li>Bank transfer</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <p>© <span id="year">2026</span> A.M Resin Adventure · Handmade with 💎 in Navsari</p>
+  </div>
+</footer>
+
+<!-- Mobile action dock -->
+<div class="dock" aria-label="Quick order actions">
+  <a class="btn btn-wa" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✆</span> WhatsApp</a>
+  <a class="btn btn-primary" data-call href="tel:+918160776905"><span aria-hidden="true">☎</span> Call</a>
 </div>
+
+<a class="wa-float" data-wa="hello" href="https://wa.me/918160776905" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.6-.1a11 11 0 0 1-4-2.5 10 10 0 0 1-2-3c-.2-.5-.2-1-.1-1.4.1-.4.4-.8.7-1 .2-.2.4-.2.6-.2h.4c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .5a7 7 0 0 0 2.9 2.4c.3.1.4 0 .5-.1l.7-.8c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3 0 .2 0 .7-.1 1Z"/></svg>
+</a>
+
+<!-- Quick view dialog -->
+<dialog class="modal" id="dialog" aria-labelledby="dlgTitle">
+  <div class="modal-inner" id="dialogBody"></div>
+</dialog>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <script src="app.js"></script>
 </body>
