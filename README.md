@@ -10,6 +10,10 @@ styles.css                     design tokens + layout
 app.js                         products, filtering, quick view, WhatsApp handoff
 assets/img/*.webp              optimised product photos (transparent background)
 assets/img/og-cover.jpg        1200×630 social share image
+assets/img/logo.webp           brand logo, 640×640 (footer)
+assets/img/logo-384.webp       brand logo, 384×384 (header)
+favicon.ico / favicon-256.png / favicon-512.png / apple-touch-icon.png
+  icons generated from assets/ico.png
 _headers                       security headers for Cloudflare Pages / Netlify
 resin/                         original source images (not served)
 ```
@@ -54,6 +58,43 @@ magick resin/Coaster.png -trim +repage -bordercolor none -border 14 \
 The originals are transparent PNGs, which is why the cards use a warm cream
 panel and `object-fit: contain` rather than a crop. Keep the `width`/`height`
 attributes in `app.js` in sync with the exported files to avoid layout shift.
+
+### Logo and icons
+
+`assets/ico.png` is the master artwork (1141×1174, transparent background).
+Everything else is generated from it: trim to the artwork, add 6% padding, then
+centre on a square canvas so nothing clips at rounded corners.
+
+```bash
+magick assets/ico.png -trim +repage -bordercolor none -border 67 \
+  -background none -gravity center -extent 1249x1249 /tmp/logo_master.png
+
+# page marks — transparent, padded
+magick /tmp/logo_master.png -resize 384x384 -quality 90 \
+  -define webp:alpha-quality=100 assets/img/logo-384.webp
+magick /tmp/logo_master.png -resize 640x640 -quality 90 \
+  -define webp:alpha-quality=100 assets/img/logo.webp
+
+# icons — opaque cream so the dark brown script stays readable on dark tab bars
+magick /tmp/logo_master.png -background "#fffdf9" -alpha remove -alpha off \
+  -resize 512x512 favicon-512.png
+magick /tmp/logo_master.png -background "#fffdf9" -alpha remove -alpha off \
+  -resize 256x256 favicon-256.png
+magick /tmp/logo_master.png -background "#fffdf9" -alpha remove -alpha off \
+  -resize 180x180 apple-touch-icon.png
+magick favicon-512.png -define icon:auto-resize=48,32,16 favicon.ico
+```
+
+The logo contains its own script wordmark, so at 36–44 px in the header it reads
+as an emblem rather than text — the live `<span class="logo-text">` beside it is
+what stays legible (and the `img` is `alt=""`, so screen readers hear the name
+once). In the footer it is shown large enough to read on its own, stacked above
+the text wordmark. Swap `assets/ico.png` and re-run the commands above to rebrand.
+
+`favicon.ico` is the small legacy fallback (16/32/48 px). The 256 and 512 px
+PNGs are declared with `sizes` and are what modern browsers and OS shortcuts
+use; a 256 px frame is deliberately not packed into the `.ico`, which would
+store it uncompressed and cost ~285 KB for a tab icon.
 
 ## Sections
 

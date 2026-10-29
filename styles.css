@@ -172,13 +172,22 @@ em{font-style:italic}
 
 .logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:1.08rem;letter-spacing:-.01em}
 .logo-mark{
-  display:grid;place-items:center;width:32px;height:32px;border-radius:9px;
-  background:linear-gradient(140deg,var(--teal),#0a4f49);color:#f7e9c9;font-size:.9rem;
-  box-shadow:0 6px 14px -8px rgba(13,107,99,.9);
+  flex:none;display:block;width:44px;height:44px;border-radius:12px;
+  object-fit:contain;background:#fffdf9;padding:2px;
+  border:1px solid rgba(197,158,94,.42);
+  box-shadow:0 8px 18px -10px rgba(60,40,20,.55);
+  transition:transform .25s ease;
 }
+.logo:hover .logo-mark{transform:rotate(-4deg) scale(1.04)}
 .logo-text em{color:var(--gold);font-style:italic}
 .logo-light{color:#f4ecdf}
 .logo-light em{color:#e5b96a}
+.logo-light .logo-mark{
+  width:96px;height:96px;border-radius:22px;padding:4px;
+  border-color:rgba(255,255,255,.16);
+  box-shadow:0 26px 50px -26px rgba(0,0,0,.95);
+}
+.foot-brand .logo{flex-direction:column;align-items:flex-start;gap:16px}
 
 .nav{display:flex;gap:4px;margin-left:auto}
 .nav a{
@@ -796,6 +805,9 @@ footer h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#
   .field-search{flex:1}
   .search{width:100%}
   .sort{max-width:52%}
+  .logo-mark{width:36px;height:36px;border-radius:10px}
+  .logo-light .logo-mark{width:82px;height:82px;border-radius:20px}
+  .logo{font-size:1rem;gap:8px;min-width:0}
   .hero-photo{width:min(100%,340px)}
   .hero-photo-sm{width:min(44%,150px);bottom:2%}
   .hero-tag{left:0;bottom:0;padding:9px 13px}
